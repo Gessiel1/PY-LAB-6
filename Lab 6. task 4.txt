@@ -1,0 +1,14 @@
+import json
+import csv
+#INPUT_FILE = "input.csv"
+
+data = []
+with open("input.csv", 'r') as f:
+    reader = csv.DictReader(f)
+    for row in reader:
+        data.append(row)
+print(json.dumps(data, indent=4))
+
+
+
+#print(json.dumps(csv_to_list_dict(INPUT_FILE), indent=4))
